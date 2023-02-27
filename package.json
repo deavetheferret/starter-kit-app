@@ -1,6 +1,6 @@
 {
   "name": "starter-kit-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A cross-platform app that integrate the original CLI starterkit",
   "main": "main.js",
   "author": "François Devantay, eikon",
