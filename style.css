@@ -3,6 +3,7 @@
   --color-second-bg: #161616;
   --color-main-fg:#ffffff;
   --color-enhanced:#B32EFF;
+  --color-enhanced-hover: #731AA6;
   --font-main: 'Space Grotesk', sans-serif;
   --font-code: 'Space Mono', monospace;
 }
@@ -128,6 +129,12 @@ h3 {
   margin: 52px 0;
 }
 
+.article-part {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
 .note-article {
   margin: 0;
   margin-bottom: 15px;
@@ -139,8 +146,33 @@ h3 {
   padding: 10px;
   border-radius: 12px;
   margin: 10px 0 0 0;
+  user-select: text;
+}
+
+.code-snippets::selection {
+  background-color: #731AA6;
+  color: #ffffff;
+}
+
+.code-snippets:hover {
+  outline: solid 2px var(--color-enhanced);
 }
 
 .button-container {
   padding: 8px 50px;
+  background-color: var(--color-enhanced);
+  border-radius: 12px;
+  display: inline-block;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.button-container a {
+  font-size: 26px;
+  color: var(--color-main-fg);
+  text-decoration: none;
+}
+
+.button-container:hover {
+  background-color: var(--color-enhanced-hover);
 }
