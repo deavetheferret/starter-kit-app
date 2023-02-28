@@ -149,6 +149,10 @@ h3 {
   user-select: text;
 }
 
+.code-snippets img {
+  width: 50%;
+}
+
 .code-snippets::selection {
   background-color: #731AA6;
   color: #ffffff;
@@ -175,4 +179,43 @@ h3 {
 
 .button-container:hover {
   background-color: var(--color-enhanced-hover);
+}
+
+.selectable:hover {
+  outline: solid 2px var(--color-enhanced);
+}
+
+.selected-option {
+  background-color: var(--color-enhanced);
+}
+
+.note-article.selectable .code-snippets:hover {
+  outline: none;
+}
+
+.unselectable {
+  user-select: none;
+}
+
+.unselectable:hover {
+  outline: none;
+}
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  border: none;
+}
+
+progress::-webkit-progress-bar {
+  background: transparent;
+  border: none;
+}
+progress::-webkit-progress-value {
+  background: var(--color-enhanced);
+  background-attachment: fixed;
+  border: none;
+  border-radius: 5px;
 }
