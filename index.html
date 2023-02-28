@@ -6,13 +6,72 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
-    <title>Hello World!</title>
+    <title>Starter Kit</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>, Chromium
-    <span id="chrome-version"></span>, and Electron
-    <span id="electron-version"></span>.
+    <section class="side-bar">
+      <div class="logo-container">
+        <img src="src/img/logo.svg" alt="logo" class="logo" />
+        <h3 class="logo-title">Starter Kit</h3>
+      </div>
+      <div class="list-container">
+        <div class="list-title">
+          <img src="src/font/folder_open_black_24dp.svg" alt="" />
+          <h4><a href="pages/starter.html">Starter</a></h4>
+        </div>
+        <div class="list">
+          <ul>
+            <li>
+              <a href="pages/starter-new-step-1.html">Create a new kit</a>
+            </li>
+            <li>
+              <a href="pages/starter-add-step-1.html">Add the kit</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="list-container">
+        <div class="list-title">
+          <img src="src/font/folder_open_black_24dp.svg" alt="" />
+          <h4><a href="pages/docs.html">Docs</a></h4>
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="pages/doc-html.html">HTML</a></li>
+            <li><a href="pages/doc-css.html">CSS / SCSS</a></li>
+            <li><a href="pages/doc-js.html">JavaScript</a></li>
+            <li><a href="pages/doc-cli.html">CLI</a></li>
+            <li><a href="pages/doc-bootstrap.html">Bootstrap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="list-container">
+        <div class="list-title">
+          <img src="src/font/settings_black_24dp.svg" alt="" />
+          <h4><a href="pages/settings.html">Settings</a></h4>
+        </div>
+        <div class="list">
+          <ul>
+            <li><a href="pages/set-general.html">General</a></li>
+            <li><a href="pages/set-system.html">System</a></li>
+            <li><a href="pages/set-user.html">User</a></li>
+            <li><a href="pages/set-misc.html">Miscellenious</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="content-view"></section>
   </body>
+  <script src="content.js"></script>
 </html>
