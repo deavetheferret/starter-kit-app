@@ -4,6 +4,7 @@
   --color-main-fg:#ffffff;
   --color-enhanced:#B32EFF;
   --font-main: 'Space Grotesk', sans-serif;
+  --font-code: 'Space Mono', monospace;
 }
 
 /* rest rules */
@@ -11,12 +12,14 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
 }
+
 
 /* base rules */
 
@@ -25,29 +28,36 @@ body {
   color: var(--color-main-fg);
   background-color: var(--color-main-bg);
   font-family: var(--font-main);
-  height: 100vh;
   min-width: 862px;
-  overflow: hidden;
+  user-select: none;
+  display: flex;
+  height: 100vh;
 }
 
-section.content {
+section.content-view {
   min-width: 583px;
-  height: 100vh;
+  height: 100%;
+  overflow: scroll;
+  padding: 60px 36px;
 }
 
 section.side-bar {
-  width: 225px;
-  height: 100vh;
+  min-width: 278.68px;
+  max-width: 278.68px;
+  height: 100%;
   padding: 60px 36px;
   background-color: var(--color-second-bg);
   display: flex;
   flex-direction: column;
   align-items: left;
   gap: 50px;
+  position: sticky;
+  top: 0;
 }
 
 h3 {
   font-size: 26px;
+  font-weight: 500;
 }
 
 .logo-container {
@@ -99,4 +109,38 @@ h3 {
 
 .list a:hover {
   color: var(--color-enhanced);
+}
+
+.content-view h1 {
+  font-size: 52px;
+}
+
+.content-view h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.note {
+  background-color: var(--color-second-bg);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 52px 0;
+}
+
+.note-article {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.code-snippets {
+  background-color: var(--color-main-bg);
+  font-family: var(--font-code);
+  padding: 10px;
+  border-radius: 12px;
+  margin: 10px 0 0 0;
+}
+
+.button-container {
+  padding: 8px 50px;
 }
